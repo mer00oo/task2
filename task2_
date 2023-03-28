@@ -1,0 +1,19 @@
+# task2
+
+Self-Join:
+A self-join is a type of join operation where a table is joined with itself. In other words, it is a way to combine rows from the same table based on a common column. Self-joins are useful when you need to compare data within the same table.
+
+Implicit Join:
+An implicit join is a type of join that uses the WHERE clause to specify the join condition. In an implicit join, you do not use the JOIN keyword or specify the type of join. Instead, you simply list the tables in the FROM clause and use the WHERE clause to specify how they should be joined.
+
+Self-Outer Join:
+A self-outer join is similar to a self-join, but it includes all rows from one table and matching rows from another table. In other words, it returns all rows from one table even if there are no matches in the other table.
+
+Natural Join:
+A natural join is a type of join that combines two tables based on columns with matching names and data types. In other words, it automatically matches columns with the same name and data type in both tables.
+
+Cross Join:
+A cross join (also known as a Cartesian product) returns all possible combinations of rows from two tables. It does not require any matching criteria or conditions.
+
+Union:
+A union combines two or more SELECT statements into a single result set. It returns all distinct rows from each SELECT statement and removes duplicates. The number and order of columns must be identical in each SELECT statement being combined.

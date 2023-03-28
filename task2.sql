@@ -40,45 +40,55 @@ INSERT INTO Orders (order_id, customer_id, product_id, quantity) VALUES
 (2, 5, 4, 3),
 (3, 6, 2 ,7);
 
+-- INNER JOIN
 SELECT *
 FROM Orders
 INNER JOIN Customers ON Orders.customer_id = Customers.customer_id;
 
+-- LEFT JOIN
 SELECT *
 FROM Customers
 LEFT JOIN Orders ON Customers.customer_id = Orders.customer_id;
 
+-- RIGHT JOIN
 SELECT *
 FROM Orders
 RIGHT JOIN Customers ON Orders.customer_id = Customers.customer_id;
 
+ -- JOIN
 SELECT *
 FROM Customers
 JOIN Orders ON Customers.customer_id = Orders.customer_id;
 
+-- Self joins
 SELECT *
 FROM Customers c
 JOIN Products p
 ON c.customer_id = p.product_id;
 
+-- Implicit join syntax
 SELECT *
-FROM  Products p, customers c
+FROM  Products p, customers 
 WHERE p.product_id = c.customer_id;
 
+-- Self outer joins
 SELECT customer_id,customer_name AS product_id, product_name
 FROM customers c
 JOIN Products p
 ON p.product_id = c.customer_id;
 
+-- NATURAL JOIN
 SELECT product_id, product_name
 FROM Products p
 NATURAL JOIN customers c;
 
+-- CROSS JOIN
 SELECT customer_name AS customer, product_name AS product
 FROM customers c
 CROSS JOIN products p
 ORDER BY customer_name;
-
+ 
+ -- Unions
 SELECT customer_name
 FROM customers
 UNION
